@@ -31,6 +31,7 @@ const Header = () => {
 			setIsScrolled(false)
 		} else {
 			document.body.classList.remove('lock')
+			setIsScrolled(true)
 		}
 	}
 	useEffect(() => {
