@@ -29,9 +29,11 @@ const Header = () => {
 		if (!isOpen) {
 			document.body.classList.add('lock')
 			setIsScrolled(false)
-		} else {
+		} else if (window.scrollY > 50) {
 			document.body.classList.remove('lock')
 			setIsScrolled(true)
+		} else {
+			document.body.classList.remove('lock')
 		}
 	}
 	useEffect(() => {
