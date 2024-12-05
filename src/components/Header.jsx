@@ -6,9 +6,11 @@ import LanguageSwitcher from './ui/LanguageSwitcher'
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
+	const [isHidden, setIsHidden] = useState(false)
 	const [isScrolled, setIsScrolled] = useState(false)
 	const [isHovered, setIsHovered] = useState(false)
 	const [isMobile, setIsMobile] = useState(false)
+	const [lastScrollY, setLastScrollY] = useState(0) // Для отслеживания позиции скролла
 
 	// Определение мобильного устройства
 	useEffect(() => {
@@ -36,6 +38,30 @@ const Header = () => {
 			document.body.classList.remove('lock')
 		}
 	}
+	// // Отслеживание направления скролла
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		const currentScrollY = window.scrollY
+
+	// 		// Если скролл вниз, скрываем хедер
+	// 		if (currentScrollY > lastScrollY && currentScrollY > 50) {
+	// 			setIsHidden(true)
+	// 		} else {
+	// 			setIsHidden(false)
+	// 		}
+	// 		// Сохраняем текущую позицию скролла
+	// 		setLastScrollY(currentScrollY)
+
+	// 		// Устанавливаем состояние "isScrolled"
+	// 		setIsScrolled(currentScrollY > 50)
+	// 	}
+
+	// 	window.addEventListener('scroll', handleScroll)
+
+	// 	return () => {
+	// 		window.removeEventListener('scroll', handleScroll)
+	// 	}
+	// }, [lastScrollY])
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 50)
@@ -47,13 +73,12 @@ const Header = () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [])
-
 	return (
 		<header
-			className={`fixed w-full z-20 duration-500 ${
+			className={`fixed w-full z-20 py-[18px] duration-500 ${
 				isScrolled || (isHovered && !isMobile)
-					? 'bg-white shadow-custom-combined py-[10px]'
-					: 'bg-slate-800 bg-opacity-20 py-[18px]'
+					? 'bg-white shadow-custom-combined'
+					: 'bg-slate-800 bg-opacity-20'
 			}`}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}

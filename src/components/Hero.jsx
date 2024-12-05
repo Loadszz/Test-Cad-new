@@ -108,7 +108,7 @@ const Hero = ({ Swiper, SwiperSlide, Navigation, Pagination, Autoplay }) => {
 									<div className='hero-text content-center mb-[64px] max-w-[665px] tb:mb-[48px] mb:mb-[40px]'>
 										{slide.text}
 									</div>
-									<div className='flex h-[54px] w-[250px] items-center justify-center rounded-[360px] bg-accent hover:bg-cyan-600 cursor-pointer transition-all duration-500'>
+									<div className='flex h-[54px] w-[250px] items-center justify-center rounded-[360px] bg-accent hover:bg-[#0ea5e0] cursor-pointer transition-all duration-500'>
 										<Link
 											to='contact'
 											activeClass='active'

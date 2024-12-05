@@ -12,19 +12,12 @@ const Footer = () => {
 				<div className='flex mb:flex-col justify-between items-center mb:items-baseline mb-[60px] mb:gap-y-[50px]'>
 					<a href='/'>
 						<Image
-							src={'/images/GeeksTechGlobal_Logo_Final_3.2.svg'}
-							alt='logo.svg'
+							src={'/images/logo-1.svg'}
+							alt='logo-1.svg'
 							width={513}
 							height={212}
 							className='mb-[20px] lpl:w-[430px] tb:w-[225px] mb:w-[300px]'
 						/>
-						{/* <Image
-							src={'./images/consulting-and-audit.svg'}
-							alt='consulting-and-audit.svg'
-							width={311}
-							height={22}
-							className='lpl:w-[248px] tb:w-[198px] mb:w-[162px]'
-						/> */}
 					</a>
 					<div className='flex mb:flex-col gap-x-[180px] lpl:gap-x-[120px] tb:gap-x-[80px] mb:gap-y-[50px]'>
 						<div>

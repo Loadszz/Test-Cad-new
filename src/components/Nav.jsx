@@ -1,9 +1,8 @@
-import { Link } from 'react-scroll';
 import { useLanguageSwitch } from '@/assets/useLanguageSwitch'
-
+import { Link } from 'react-scroll'
 
 const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
-	const { t, locale, locales, handleClick } = useLanguageSwitch();
+	const { t, locale, locales, handleClick } = useLanguageSwitch()
 	return (
 		<nav className={navStyle}>
 			<ul className={ulStyle}>
@@ -13,8 +12,10 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
+						offset={-109}
 						onClick={isOpen ? handleBurger : null}
-					>{t('header.navigation-1')}
+					>
+						{t('header.navigation-1')}
 					</Link>
 				</li>
 				<li className={liStyle}>
@@ -23,7 +24,10 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						onClick={isOpen ? handleBurger : null}>{t('header.navigation-2')}
+						offset={-109}
+						onClick={isOpen ? handleBurger : null}
+					>
+						{t('header.navigation-2')}
 					</Link>
 				</li>
 				<li className={liStyle}>
@@ -32,8 +36,10 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						onClick={isOpen ? handleBurger : null}>{t('header.navigation-3')}
-
+						offset={-109}
+						onClick={isOpen ? handleBurger : null}
+					>
+						{t('header.navigation-3')}
 					</Link>
 				</li>
 				<li className={liStyle}>
@@ -42,8 +48,10 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						onClick={isOpen ? handleBurger : null}>{t('header.navigation-4')}
-
+						offset={-109}
+						onClick={isOpen ? handleBurger : null}
+					>
+						{t('header.navigation-4')}
 					</Link>
 				</li>
 				<li className={liStyle}>
@@ -52,7 +60,10 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						onClick={isOpen ? handleBurger : null}>{t('header.navigation-5')}
+						offset={-109}
+						onClick={isOpen ? handleBurger : null}
+					>
+						{t('header.navigation-5')}
 					</Link>
 				</li>
 			</ul>
