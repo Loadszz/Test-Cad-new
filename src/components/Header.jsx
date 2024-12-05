@@ -52,10 +52,10 @@ const Header = () => {
 
 	return (
 		<header
-			className={`fixed w-full py-[18px] z-20 duration-500 ${
+			className={`fixed w-full z-20 duration-500 ${
 				isScrolled || (isHovered && !isMobile)
-					? 'bg-slate-100'
-					: 'bg-slate-800 bg-opacity-20'
+					? 'bg-slate-100 shadow-custom-combined py-[10px]'
+					: 'bg-slate-800 bg-opacity-20 py-[18px]'
 			}`}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}

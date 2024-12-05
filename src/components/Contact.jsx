@@ -133,7 +133,7 @@ const Contact = () => {
 							/>
 
 							<textarea
-								className='h-[54px] outline-none border-b-[1px] border-[#E6E6E6] placeholder:text-[#B8BBBC] placeholder:text-[16px] text-[20px] resize-none'
+								className='h-[54px] outline-none border-b-[1px] border-[#E6E6E6] placeholder:text-[#B8BBBC] placeholder:text-[16px] text-[20px] resize-none content-center'
 								placeholder={t('contacts.message')}
 								type='text'
 								name='message'

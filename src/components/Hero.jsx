@@ -85,7 +85,7 @@ const Hero = ({ Swiper, SwiperSlide, Navigation, Pagination, Autoplay }) => {
 				className={'hero-swiper-pagination'}
 				modules={[Navigation, Pagination, Autoplay]}
 				slidesPerView={1}
-				autoplay={{ delay: 5000 }}
+				autoplay={{ delay: 15000 }}
 				onAutoplayTimeLeft={onAutoplayTimeLeft}
 				pagination={{
 					type: 'fraction',
@@ -132,7 +132,7 @@ const Hero = ({ Swiper, SwiperSlide, Navigation, Pagination, Autoplay }) => {
 				<div className='absolute bottom-[80px] mb:bottom-[40px] flex w-full items-center justify-between'>
 					<SwiperButtons slides={slides}></SwiperButtons>
 					<div className='autoplay-progress' slot='container-end'>
-						<div className='relative w-full h-[8px] bg-[#e0e0e0] rounded-[4px] overflow-hidden'>
+						<div className='relative w-full h-[4px] bg-[#e0e0e0] rounded-[4px] overflow-hidden'>
 							<div className='w-[0%] h-full bg-accent' ref={progressRef}></div>
 						</div>
 						<div className='hero-swiper-pagination'>

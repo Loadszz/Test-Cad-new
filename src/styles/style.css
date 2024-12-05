@@ -53,7 +53,7 @@
 		@apply bg-gradient-to-r from-[#44CAFF] to-[#10D7F2] bg-clip-text text-transparent;
 	}
 	h1 {
-		@apply unbounded-regular text-[72px] tb:text-[48px] mb:text-[36px] leading-[93px] tb:leading-[62px] mb:leading-[43px]  text-white;
+		@apply unbounded-regular text-[58px] tb:text-[48px] mb:text-[36px] leading-[93px] tb:leading-[62px] mb:leading-[43px]  text-white;
 	}
 	h2 {
 		@apply unbounded-medium text-[48px] leading-[62px] tb:text-[28px] tb:leading-[39px] mb:text-[24px] mb:leading-[31px];
@@ -76,10 +76,10 @@
 		@apply flex justify-center gap-[10px] w-[100px] px-[15px] unbounded-regular text-[16px] leading-[24px] text-white;
 	}
 	.hero-sub-title {
-		@apply unbounded-regular text-[20px] tb:text-[14px] text-white;
+		@apply unbounded-regular text-[18px] tb:text-[14px] text-white;
 	}
 	.hero-text {
-		@apply unbounded-regular text-[24px] tb:text-[16px] text-white leading-[33px] tb:leading-[22px] mb:text-[14px] mb:leading-[19px];
+		@apply unbounded-regular text-[20px] tb:text-[16px] text-white leading-[33px] tb:leading-[22px] mb:text-[14px] mb:leading-[19px];
 	}
 	/* //////////////////////////////////////////////////////////// */
 	.services-card-icon {
