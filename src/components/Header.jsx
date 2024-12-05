@@ -37,13 +37,19 @@ const Header = () => {
 		}
 	}
 	useEffect(() => {
+		// const handleScroll = () => {
+		// 	if (window.scrollY > 50) {
+		// 		setIsScrolled(true)
+		// 	} else {
+		// 		setIsScrolled(false)
+		// 	}
+		// }
 		const handleScroll = () => {
-			if (window.scrollY > 50) {
-				setIsScrolled(true)
-			} else {
-				setIsScrolled(false)
-			}
+			setIsScrolled(window.scrollY > 50)
 		}
+
+		// Проверяем позицию скролла при загрузке
+		handleScroll()
 		window.addEventListener('scroll', handleScroll)
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
