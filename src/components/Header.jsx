@@ -37,17 +37,9 @@ const Header = () => {
 		}
 	}
 	useEffect(() => {
-		// const handleScroll = () => {
-		// 	if (window.scrollY > 50) {
-		// 		setIsScrolled(true)
-		// 	} else {
-		// 		setIsScrolled(false)
-		// 	}
-		// }
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 50)
 		}
-
 		// Проверяем позицию скролла при загрузке
 		handleScroll()
 		window.addEventListener('scroll', handleScroll)
@@ -60,7 +52,7 @@ const Header = () => {
 		<header
 			className={`fixed w-full z-20 duration-500 ${
 				isScrolled || (isHovered && !isMobile)
-					? 'bg-slate-100 shadow-custom-combined py-[10px]'
+					? 'bg-white shadow-custom-combined py-[10px]'
 					: 'bg-slate-800 bg-opacity-20 py-[18px]'
 			}`}
 			onMouseEnter={() => setIsHovered(true)}
