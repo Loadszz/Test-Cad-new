@@ -6,18 +6,22 @@ import LanguageSwitcher from './ui/LanguageSwitcher'
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
-	const [isHidden, setIsHidden] = useState(false)
+	const [isOffcet, setIsOffcet] = useState(-130)
 	const [isScrolled, setIsScrolled] = useState(false)
 	const [isHovered, setIsHovered] = useState(false)
 	const [isMobile, setIsMobile] = useState(false)
-	const [lastScrollY, setLastScrollY] = useState(0) // Для отслеживания позиции скролла
 
 	// Определение мобильного устройства
 	useEffect(() => {
 		const handleResize = () => {
 			setIsMobile(window.innerWidth <= 1024)
 		}
-
+		if (window.innerWidth <= 1024) {
+			setIsOffcet(-94)
+		}
+		if (window.innerWidth <= 768) {
+			setIsOffcet(-83)
+		}
 		handleResize() // Устанавливаем начальное значение
 		window.addEventListener('resize', handleResize)
 
@@ -38,30 +42,7 @@ const Header = () => {
 			document.body.classList.remove('lock')
 		}
 	}
-	// // Отслеживание направления скролла
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		const currentScrollY = window.scrollY
 
-	// 		// Если скролл вниз, скрываем хедер
-	// 		if (currentScrollY > lastScrollY && currentScrollY > 50) {
-	// 			setIsHidden(true)
-	// 		} else {
-	// 			setIsHidden(false)
-	// 		}
-	// 		// Сохраняем текущую позицию скролла
-	// 		setLastScrollY(currentScrollY)
-
-	// 		// Устанавливаем состояние "isScrolled"
-	// 		setIsScrolled(currentScrollY > 50)
-	// 	}
-
-	// 	window.addEventListener('scroll', handleScroll)
-
-	// 	return () => {
-	// 		window.removeEventListener('scroll', handleScroll)
-	// 	}
-	// }, [lastScrollY])
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 50)
@@ -114,6 +95,7 @@ const Header = () => {
 					>
 						<Nav
 							isOpen={isOpen}
+							isOffcet={isOffcet}
 							handleBurger={handleBurger}
 							navStyle={'w-full tb:mb-[50px]'}
 							ulStyle={

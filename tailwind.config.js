@@ -24,9 +24,9 @@ module.exports = {
 				unbounded: ['var(--font-unbounded)'],
 			},
 			backgroundImage: {
-				hero: "url('/images/hero/hero-background.jpg')",
-				hero2: "url('/images/hero/hero-background-2.jpg')",
-				hero3: "url('/images/hero/hero-background-3.jpg')",
+				hero: "url('/images/hero/hero-background.webP')",
+				hero2: "url('/images/hero/hero-background-2.webP')",
+				hero3: "url('/images/hero/hero-background-3.webP')",
 				burger: "url('/images/header/burger-background.svg')",
 				footer: "url('/images/footer/footer-background.svg')",
 				'our-client': "url('/images/our-client/our-client-bg.jpg')",

@@ -1,7 +1,14 @@
 import { useLanguageSwitch } from '@/assets/useLanguageSwitch'
 import { Link } from 'react-scroll'
 
-const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
+const Nav = ({
+	navStyle,
+	ulStyle,
+	liStyle,
+	isOpen,
+	isOffcet,
+	handleBurger,
+}) => {
 	const { t, locale, locales, handleClick } = useLanguageSwitch()
 	return (
 		<nav className={navStyle}>
@@ -12,7 +19,7 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						offset={-109}
+						offset={isOffcet}
 						onClick={isOpen ? handleBurger : null}
 					>
 						{t('header.navigation-1')}
@@ -24,7 +31,7 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						offset={-109}
+						offset={isOffcet}
 						onClick={isOpen ? handleBurger : null}
 					>
 						{t('header.navigation-2')}
@@ -36,7 +43,7 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						offset={-109}
+						offset={isOffcet}
 						onClick={isOpen ? handleBurger : null}
 					>
 						{t('header.navigation-3')}
@@ -48,7 +55,7 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						offset={-109}
+						offset={isOffcet}
 						onClick={isOpen ? handleBurger : null}
 					>
 						{t('header.navigation-4')}
@@ -60,7 +67,7 @@ const Nav = ({ navStyle, ulStyle, liStyle, isOpen, handleBurger }) => {
 						activeClass='active'
 						smooth={true}
 						spy={true}
-						offset={-109}
+						offset={isOffcet}
 						onClick={isOpen ? handleBurger : null}
 					>
 						{t('header.navigation-5')}
