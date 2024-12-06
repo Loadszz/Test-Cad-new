@@ -6,7 +6,7 @@ import LanguageSwitcher from './ui/LanguageSwitcher'
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
-	const [isOffcet, setIsOffcet] = useState(-130)
+	const [isOffcet, setIsOffcet] = useState(-110)
 	const [isScrolled, setIsScrolled] = useState(false)
 	const [isHovered, setIsHovered] = useState(false)
 	const [isMobile, setIsMobile] = useState(false)
